@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Addition
+        const add = (a, b) =>  a+b;
+        
+        let addition = add(5, 6);
+        console.log(addition);
+
+        // Subtraction
+        const subtract = (a, b) => a - b;
+
+        let subtraction = subtract (11, 7);
+        console.log(subtraction);
+
+        // Sum
+        array = [1,2,3,4];
+        const sum = array.reduce((total, current) => {
+            return total + current;
+        }, 0);
+
+        console.log(sum);
+
+        // Multiply
+        const multi = (a, b) => a * b;
+        const c = multi(4, 5);
+        console.log(c);
+
+        // Power
+        const power = (a,b) => a ** b;
+        const d = power(5, 4);
+        console.log(d);
+
+        // Factorial
+        const factorial = array.reduce((total, current) => total * current);
+        console.log(factorial);
+
+        // Palindromes
+        const palindromes = string => {
+            const alphanumerical = "abcdefghijklmnopqrstuvwxyz0123456789";
+
+            const cleanedString = string
+                .toLowerCase()
+                .split("")
+                .filter(character => alphanumerical.includes(character))
+                .join("");
+
+            const reversedString = cleanedString.split("").reverse().join("");
+
+            return reversedString === cleanedString;
+        };
+
+        console.log(palindromes("next"));
+
+        // Fibonacci
+        const fibonacci = (countArg) => {
+            let count;
+            if (typeof(countArg) !== "number")
+            {
+                count = parseInt(countArg);
+            } else {
+                count = countArg;
+            }
+
+            if (count < 0) return "OOPS";
+            if (count == 0) return 0;
+
+            let firstPrev = 1;
+            let secondPrev = 0;
+
+            for (let i = 2; i <= count; i++) {
+                let current = firstPrev + secondPrev;
+                secondPrev = firstPrev;
+                firstPrev = current;
+                }
+            return firstPrev;
+        }
+
+        console.log(fibonacci(-1));
+
+        // Get the titles
+        const books = [
+                        {
+                            title: 'Book',
+                            author: 'Name'
+                        },
+                        {
+                            title: 'Book2',
+                            author: 'Name2'
+                        }
+                    ]
+                    
+                
+
+        const getTitles = (books) => {
+            return books.map((book) => book.title)
+                
+            }
+        
+
+        console.log(getTitles(books));
+
+        // Find the oldest
+        const people = [
+      {
+        name: "Carly",
+        yearOfBirth: 1942,
+        yearOfDeath: 1970,
+      },
+      {
+        name: "Ray",
+        yearOfBirth: 1962,
+        yearOfDeath: 2011,
+      },
+      {
+        name: "Jane",
+        yearOfBirth: 1912,
+        yearOfDeath: 1941
+      },
+    ]
+
+    const findTheOldest = function (array) {
+        return array.reduce((oldest, currentPerson) => {
+            const oldestAge = getAge(oldest.yearOfBirth, oldest.yearOfDeath);
+            const currentAge = getAge(currentPerson.yearOfBirth, currentPerson.yearOfDeath);
+            return oldestAge < currentAge ? currentPerson : oldest;
+            
+  });
+};
+
+
+    const getAge = (birth, death) => death - birth;
+
+console.log(findTheOldest(people));
+
+    </script>
+</body>
+</html>
