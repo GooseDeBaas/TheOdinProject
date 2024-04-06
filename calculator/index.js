@@ -15,7 +15,7 @@ const buttonPlus = document.getElementById("buttonPlus");
 const buttonMinus = document.getElementById("buttonMinus");
 const buttonClear = document.getElementById("buttonClear");
 const buttonDot = document.getElementById("buttonDot");
-const buttontotal = document.getElementById("buttonTotal");
+const buttonTotal = document.getElementById("buttonTotal");
 
 let firstNumber = 0;
 let secondNumber;
@@ -27,12 +27,16 @@ function numberClick(e) {
         let element = e.currentTarget;
         display.value = display.value + element.value
         secondNumber = display.value;
+        console.log(secondNumber);
     } else {
         isOperatorOn = false;
+        buttonDot.disabled = false;
         let element = e.currentTarget;
         display.value = element.value;
-
     }
+    if (display.value.includes('.')) {
+        buttonDot.disabled = true;
+    } 
 }
 
 function numberClear() {
@@ -67,10 +71,10 @@ function operate(e) {
     operator = element.name;
 }
 
-const sum = (firstNumber, secondNumber) => parseInt(firstNumber) + parseInt(secondNumber);
-const substract = (firstNumber, secondNumber) => parseInt(firstNumber) - parseInt(secondNumber);
-const divide = (firstNumber, secondNumber) => parseInt(firstNumber) / parseInt(secondNumber);
-const multiply = (firstNumber, secondNumber) => parseInt(firstNumber) * parseInt(secondNumber);
+const sum = (firstNumber, secondNumber) => (parseFloat(firstNumber) + parseFloat(secondNumber)).toFixed(2);
+const substract = (firstNumber, secondNumber) => (parseFloat(firstNumber) - parseFloat(secondNumber)).toFixed(2);
+const divide = (firstNumber, secondNumber) => (parseFloat(firstNumber) / parseFloat(secondNumber)).toFixed(2);
+const multiply = (firstNumber, secondNumber) => (parseFloat(firstNumber) * parseFloat(secondNumber)).toFixed(2);
 
 
 
@@ -84,10 +88,11 @@ button6.addEventListener("click", numberClick);
 button7.addEventListener("click", numberClick);
 button8.addEventListener("click", numberClick);
 button9.addEventListener("click", numberClick);
+buttonDot.addEventListener("click", numberClick);
 
 buttonClear.addEventListener("click", numberClear);
-buttontotal.addEventListener("click", operate);
 
+buttonTotal.addEventListener("click", operate);
 buttonPlus.addEventListener("click", operate);
 buttonMinus.addEventListener("click", operate);
 buttonDivide.addEventListener("click", operate);

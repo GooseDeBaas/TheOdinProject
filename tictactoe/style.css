@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+:root {
+    --blue: #435e8a;
+    --grey:#c3c8c9; 
+    --lightblue: #9fedeb;
+    --allfont: "Architects Daughter";
+    --allfontweight: 900;
+}
+
+body {
+    background-color: var(--grey);
+    margin: 0%;
+    font-family: var(--allfont);
+    font-weight: var(--allfontweight);
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: var(--blue);
+    font-size: 100px;
+    color: var(--lightblue);
+    width: 100vw;
+    text-align: center;
+    border-bottom: solid 2px white;
+    font-weight: var(--allfontweight);
+}
+
+.content {
+    background-color: var(--grey);
+    font-size: 50px;
+    display: grid;
+    grid-template-rows: 1fr, 3fr, 1fr;
+    text-align: center;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-height: 450px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 450px;
+
+}
+
+.row > div {
+    max-width: 150px;
+    max-height: 150px;
+}
+
+.box {
+    height: 150px;
+    width: 150px;
+    transition-duration: 200ms;
+    cursor: pointer;
+    font-size: 80px;
+}
+
+.box:hover {
+    background-color: grey;
+}
+
+.player {
+    display: grid;
+    grid-template-rows: 1fr 7fr;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 50px;
+}
+
+button {
+    font-family: var(--allfont);
+    font-weight: var(--allfontweight);
+    font-size: 30px;
+    border-radius: 5px;
+}
+
+.dialog-box {
+    font-family: var(--allfont);
+    font-weight: var(--allfontweight);
+    font-size: 50px;
+    background-color: var(--blue);
+    text-align: center;
+    color: var(--lightblue);
+}
+
+.form {
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    gap: 10px;
+}
+
+h5 {
+    margin: 0px;
+}
+
+dialog::backdrop {
+    backdrop-filter: blur(5px);
+}
+
+@media screen and (max-width: 700px) {
+    
+    .header {
+        font-size: 3rem;
+    }
+
+    .content {
+        margin-top: 50px;
+        font-size: 1.5rem;
+    }
+
+    .gameboard {
+        max-height: 150px;
+        margin-top: 50px;
+    }
+
+    .grid {
+        max-width: 150px;
+    }
+    
+    .row {
+        max-width: 50px;
+        max-height: 50px;
+
+    }
+
+    .row > div {
+        max-width: 50px;
+        max-height: 50px;
+    }
+    
+    .box {
+        height: 50px;
+        width: 50px;
+        transition-duration: 200ms;
+        cursor: pointer;
+        font-size: 2rem;;
+    }
+
+    .footer {
+        text-align: center;
+        margin-top: 50px;
+    }
+    
+    button {
+        font-size: 1rem;
+        border-radius: 5px;
+    }
+}

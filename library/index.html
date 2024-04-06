@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div>
+                <h2>My library</h2>
+            </div>
+            <div></div>
+            <div></div>
+            <div class="header-button">
+                <button>Login</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="addbook">
+                <button id="add" class="add">+ Add Book</button>
+            </div>
+            <div id="bookcontainer" class="bookcontainer"></div>
+        </div>
+    </div>
+
+
+    <dialog>
+        <div class="dialog-box">
+            <h5 class="animate__heartBeat">Add a new book</h5>
+            
+            <form id="form">
+                <input type="text" class="newEntry" id="newName" placeholder="Title" required/>
+                <br>
+                <input type="text" class="newEntry" id="newAuthor" placeholder="Author" required/>
+                <br>
+                <input type="number" width="1000" class="newEntry" min="1" max="5000" style="width: 200px" id="newPages" placeholder="Pages" required/>
+                <br>
+                <label for="newRead">Have you read it?</label>
+                <input type="checkbox" class="newEntry" name="newRead" id="newRead" placeholder="Read">
+                <br><br>
+                <button id="closeButton">Close</button>
+                <button id="resetButton">Reset</button>
+                <button type="submit" id="submitButton">Submit</button>
+            </form>
+        </div>
+        
+    </dialog>
+
+
+
+    <script src="index.js"></script>
+</body>
+</html>

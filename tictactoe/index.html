@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic-Tac-Toe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">Tic-Tac-Toe</div>
+    <div class="content">
+        <div id="display">First enter your names!</div>
+        <div class="gameboard">
+            <div class="player">
+                <div id="first-player">Player 1</div>
+                <div id="first-score"></div>
+            </div>
+            <div class="grid">
+                <div class="row">
+                    <div><button value="1" class="box"></button></div>
+                    <div><button value="4" class="box"></button></div>
+                    <div><button value="7" class="box"></button></div>
+                </div>
+                <div class="row">
+                    <div><button value="2" class="box"></button></div>
+                    <div><button value="5" class="box"></button></div>
+                    <div><button value="8" class="box"></button></div>
+                </div>
+                <div class="row">
+                    <div><button value="3" class="box"></button></div>
+                    <div><button value="6" class="box"></button></div>
+                    <div><button value="9" class="box"></button></div>
+                </div>
+            </div>
+            <div class="player">
+                <div id="second-player">Player 2</div>
+                <div id="second-score"></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <button id="add-player">Add Players</button>
+        <button id="reset">Reset Game</button>
+    </div>
+
+    <dialog class="dialog-box">
+        <div class="dialog-content">
+            <h5>Add Players</h5>
+            <br>
+            <form class="form" id="form">
+                <input type="text" class="enter-player1" id="enterplayer1" placeholder="Player1" required/>
+                <input type="text" class="enter-player2" id="enterplayer2" placeholder="Player2" required/>
+                <button type="submit" id="submit-button">Submit</button>
+                <button type="close" id="close-button">Close</button>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="index.js"></script>
+</body>
+</html>

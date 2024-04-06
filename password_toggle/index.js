@@ -11,3 +11,5 @@ const togglePassword = document.querySelector("#togglePassword");
             // toggle the icon
             this.classList.toggle("bi-eye");
         });
+
+        /* 0475306115 /*

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+:root {
+    --light-green: #9fff9c;
+    --light-red: #ff9c9c;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    background-color: whitesmoke;
+    width: 100%;
+  }
+  
+  body {
+    font-size: 25px;
+    font-weight: 500;
+    word-wrap: break-word;
+    margin-bottom: 100px;
+    font-family: "Open Sans", sans-serif;
+    margin: auto;
+ 
+}
+
+h2 {
+    font-weight: 900;
+    font-size: 40px;
+}
+
+h5 {
+    font-weight: 400;
+    margin: 15px;
+}
+
+.header {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    box-shadow: black;
+    justify-items: center;
+}
+
+.header-button {
+    justify-self: end;
+    align-self: center;
+}
+
+button {
+    font-weight: 800;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: "Open Sans", sans-serif;
+}
+
+.content {
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr;
+    
+}
+
+.addbook {
+    grid-column: 1 /4;
+    justify-self: center;
+    align-self: center;
+}
+
+.bookcontainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.add {
+    background-color: whitesmoke;
+    border: 0cap;
+    padding: 10px;
+    font-size: 30px;
+}
+
+.book {
+    margin: 1rem;
+    padding: 2px;
+    background-color: slategray;
+    border-radius: 8px;
+    border-left: darkgrey 8px solid;
+    box-shadow: 4px 4px 4px rgb(173 173 173 / 50%);
+    height: 90%;
+    width: 70%;
+    justify-items: center;
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.newEntry {
+    font-family: "Open Sans", sans-serif;
+    border-radius: 5px;
+    font-size: large;
+}
+
+#newRead {
+    size: 15px;
+}
+
+button:hover {
+    background-color: darkgray;
+}
+
+dialog::backdrop {
+    opacity: 0.75;
+    background-color: grey;
+    rotate: 180deg;
+}
+
+.dialog-box {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+}
+
+.button-lightgreen {
+    background-color: var(--light-green);
+}
+
+.button-lightred {
+    background-color: var(--light-red);
+}
+
