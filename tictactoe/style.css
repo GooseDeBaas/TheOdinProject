@@ -107,7 +107,7 @@ dialog::backdrop {
 @media screen and (max-width: 700px) {
     
     .header {
-        font-size: 3rem;
+        font-size: 2rem;
     }
 
     .content {
@@ -118,6 +118,10 @@ dialog::backdrop {
     .gameboard {
         max-height: 150px;
         margin-top: 50px;
+    }
+
+    #display {
+        font-size: 1rem;;
     }
 
     .grid {
@@ -151,5 +155,9 @@ dialog::backdrop {
     button {
         font-size: 1rem;
         border-radius: 5px;
+    }
+
+    #first-player, #second-player {
+        font-size: 1rem;
     }
 }
