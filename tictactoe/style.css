@@ -142,8 +142,6 @@ dialog::backdrop {
     .box {
         height: 50px;
         width: 50px;
-        transition-duration: 200ms;
-        cursor: pointer;
         font-size: 2rem;;
     }
 
