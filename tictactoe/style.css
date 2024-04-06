@@ -145,6 +145,7 @@ dialog::backdrop {
         width: 50px;
         font-size: 2rem;
         padding: 0px;
+        color: black;
     }
 
     .footer {
