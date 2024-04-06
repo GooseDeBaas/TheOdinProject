@@ -59,6 +59,7 @@ body {
     transition-duration: 200ms;
     cursor: pointer;
     font-size: 80px;
+    color: black;
 }
 
 .box:hover {
@@ -80,6 +81,7 @@ button {
     font-weight: var(--allfontweight);
     font-size: 30px;
     border-radius: 5px;
+    color: black;
 }
 
 .dialog-box {
